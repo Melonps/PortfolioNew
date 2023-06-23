@@ -11,7 +11,7 @@ import {
     PerformanceMonitor,
 } from "@react-three/drei";
 
-export default function Model() {
+const Model = () => {
     const gltf = useLoader(GLTFLoader, "./room.glb");
     const [perfSucks, degrade] = useState(false);
 
@@ -47,7 +47,7 @@ export default function Model() {
             </Suspense>
         </>
     );
-}
+};
 
 function Env({ perfSucks }) {
     const ref = useRef();
@@ -140,3 +140,5 @@ function Env({ perfSucks }) {
         </Environment>
     );
 }
+
+export default Model;

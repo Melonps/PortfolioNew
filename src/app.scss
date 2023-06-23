@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c");
+@import url("https://fonts.googleapis.com/css?family=M+PLUS+1p:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap");
+
+@import "styles/variables";
+
+//カラー設定
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: $text-color-White;
+    color: $text-color-Black;
+    font-family: "Inter", "メイリオ", "M PLUS 1p", "M PLUS Rounded 1c",
+        "Noto Sans JP", -apple-system;
+    user-select: none;
+    cursor: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxMCIgZmlsbD0iIzNlM2UzZCIvPjwvc3ZnPg=="),
+        auto;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+canvas {
+    opacity: 0;
+    touch-action: none;
+    animation: fade-in 5s ease 1s forwards;
+}
+
+a {
+    color: $text-color-Black;
+    text-decoration: none;
+}
+
+.background {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+span {
+    font-weight: 600;
+}

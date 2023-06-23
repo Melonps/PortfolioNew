@@ -1,0 +1,126 @@
+@import "variables";
+.menu-trigger {
+    position: fixed;
+    width: 2rem;
+    top: 5vh;
+    right: 4vw;
+    cursor: pointer;
+    z-index: 9999;
+
+    span {
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+
+        transition: all 0.4s;
+        height: 3px;
+        border-radius: 2px;
+        width: 100%;
+
+        &:nth-of-type(1) {
+            top: 15px;
+        }
+
+        &:nth-of-type(2) {
+            top: 23px;
+        }
+
+        &:nth-of-type(3) {
+            top: 31px;
+        }
+    }
+
+    &._active {
+        span {
+            &:nth-of-type(1) {
+                top: 18px;
+                transform: translateY(6px) rotate(-45deg);
+                width: 70%;
+            }
+
+            &:nth-of-type(2) {
+                opacity: 0;
+            }
+
+            &:nth-of-type(3) {
+                top: 30px;
+                transform: translateY(-6px) rotate(45deg);
+                width: 70%;
+            }
+        }
+    }
+}
+
+.menu-bg {
+    position: fixed;
+
+    width: 50%;
+    height: 25%;
+    margin: auto;
+    z-index: 3;
+    /*丸の形*/
+
+    max-width: 600px;
+    padding: 30px;
+
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.747);
+    /* 背景色 */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    /* ボーダー */
+    border-right-color: rgba(255, 255, 255, 0.2);
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+    /*丸のスタート位置と形状*/
+    transform-origin: 100% 0%;
+    transform: scale(0);
+
+    /*scaleをはじめは0に*/
+    inset: 0;
+    /*50%から円の半径を引いた値*/
+    transition: all 0.4s;
+    -webkit-backdrop-filter: blur(15px);
+    /* ぼかしエフェクト */
+    backdrop-filter: blur(15px);
+    box-shadow: 0 5px 5px rgba(255, 152, 79, 0.5);
+
+    /*0.6秒かけてアニメーション*/
+    &._active {
+        transform: scale(1);
+        /*クラスが付与されたらscaleを拡大*/
+    }
+    p {
+        position: absolute;
+
+        top: 0;
+        bottom: 0;
+    }
+}
+
+.menu-wrapper {
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    top: 25%;
+    right: 50%;
+}
+
+.g-nav {
+    background: #772c2c;
+    display: none;
+    &._active {
+        background: #756969;
+        display: block;
+    }
+}
+
+.nav-list {
+    position: fixed;
+    font-size: calc(8px + 2vmin);
+    display: none;
+
+    &._active {
+        background: #756969;
+        display: block;
+    }
+}
