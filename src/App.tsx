@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Experience from "./views/Experience";
 
 import "./app.scss";
+import "./index.css";
 
 const App = () => {
     return (
