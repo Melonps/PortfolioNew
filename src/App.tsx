@@ -8,6 +8,7 @@ import Experience from "./views/Experience";
 
 import "./app.scss";
 import "./index.css";
+import "./input.css";
 
 const App = () => {
     return (
