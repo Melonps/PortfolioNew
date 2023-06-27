@@ -1,7 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 const colors = require("tailwindcss/colors");
 module.exports = {
-    content: ["./src/**/*.{js,jsx,ts,tsx}"],
+    content: [
+        "./src/**/*.{js,jsx,ts,tsx}",
+        "./pages/**/*.{js,ts,jsx,tsx}",
+        "./Components/**/*.{js,ts,jsx,tsx}",
+    ],
     theme: {
         colors: {
             blue: {
